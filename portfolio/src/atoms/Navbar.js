@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="logo">Chamalka.</div>
+      <div className="logo">Chamalka</div>
       <ul className="nav-links">
         {links.map((link) => (
           <li key={link.name}>
