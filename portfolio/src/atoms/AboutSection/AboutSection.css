@@ -1,0 +1,157 @@
+/* ============================= */
+/* 🔹 About Section - Light UI   */
+/* ============================= */
+.about-section {
+    background-color: #ffffff;
+    padding: 3rem 2rem;
+    /* compact vertical padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+    /* smaller horizontal gap */
+    max-width: 900px;
+    /* container width */
+    width: 100%;
+    padding: 0 1rem;
+    /* closer to left edge */
+    margin: 0 auto;
+}
+
+/* Left side - text */
+.about-text {
+    flex: 1;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s forwards;
+    animation-delay: 0.3s;
+    padding-left: 0;
+    /* remove extra left padding */
+}
+
+/* Heading */
+.about-text h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* Role labels */
+.about-labels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+}
+
+.label {
+    background: linear-gradient(90deg, #b821d6, #21d6b8);
+    color: #fff;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    box-shadow: 0 4px 12px rgba(184, 33, 214, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.label:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(33, 214, 184, 0.3);
+}
+
+/* Subtitle */
+.about-text h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #b821d6, #21d6b8, #ff7a18);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Paragraph */
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    background: linear-gradient(90deg, #b821d6, #21d6b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+/* Right side - image */
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 300px;
+    /* smaller image */
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: scale(0.9);
+    animation: scaleIn 1s forwards;
+    animation-delay: 0.6s;
+}
+
+/* Animations */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 2rem;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    .about-text h1 {
+        font-size: 2rem;
+    }
+
+    .about-text h3 {
+        font-size: 1.1rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    .about-labels {
+        justify-content: center;
+    }
+
+    .about-image img {
+        max-width: 280px;
+    }
+}

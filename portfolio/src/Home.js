@@ -1,7 +1,9 @@
 import React from "react";
-import Navbar from "./atoms/Navbar";
+import Navbar from "./atoms/navbar/Navbar";
 import ProfileImage from "./assets/ProfileImage.png";
 import "./Home.css";
+import ContactSection from "./atoms/contact/ContactSection";
+import AboutSection from "./atoms/AboutSection/AboutSection";
 
 const Home = () => {
   return (
@@ -12,8 +14,7 @@ const Home = () => {
           <div className="home-container">
             <div className="text">
               <h1>Hi, I'm Chamalka Obadage</h1>
-            <h2>UOM Undergraduate</h2>
-              <h2>Former Intern Software Engineer</h2>
+    
               <p>Welcome to my portfolio!</p>
             </div>
             <div className="image">
@@ -22,8 +23,8 @@ const Home = () => {
           </div>
         </section>
 
-        <section id="about" style={{ height: "100vh" }}>
-          <h2>About Me</h2>
+        <section id="about" >
+          <AboutSection />
         </section>
 
         <section id="projects" style={{ height: "100vh" }}>
@@ -32,6 +33,7 @@ const Home = () => {
 
         <section id="contact" style={{ height: "100vh" }}>
           <h2>Contact</h2>
+          <ContactSection />
         </section>
       </main>
     </div>
