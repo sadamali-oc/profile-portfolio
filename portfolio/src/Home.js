@@ -13,9 +13,10 @@ const Home = () => {
         <section id="home" className="home-section">
           <div className="home-container">
             <div className="text">
-              <h1>Hi, I'm Chamalka Obadage</h1>
-    
-              <p>Welcome to my portfolio!</p>
+              <h1>
+                Hi, I'm Chamalka <span className="highlight-name">Obadage</span>
+              </h1>
+              <p>Welcome to my portfolio 👋 </p> 
             </div>
             <div className="image">
               <img src={ProfileImage} alt="Chamalka" />
@@ -23,15 +24,15 @@ const Home = () => {
           </div>
         </section>
 
-        <section id="about" >
+        <section id="about">
           <AboutSection />
         </section>
 
-        <section id="projects" style={{ height: "100vh" }}>
+        <section id="projects" className="projects-section">
           <h2>Projects</h2>
         </section>
 
-        <section id="contact" style={{ height: "100vh" }}>
+        <section id="contact" className="contact-section">
           <h2>Contact</h2>
           <ContactSection />
         </section>
@@ -39,6 +40,5 @@ const Home = () => {
     </div>
   );
 };
-
 
 export default Home;

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Navbar.css"; 
+import logo from "../../assets/logo.png";
 
 const Navbar = () => {
   const links = [
@@ -11,7 +12,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="logo">Chamalka</div>
+      <div className="logo"> <img src={logo} alt="Logo" className="logo-img"/></div>
       <ul className="nav-links">
         {links.map((link) => (
           <li key={link.name}>

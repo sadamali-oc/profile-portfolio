@@ -1,38 +1,47 @@
 .navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
     position: fixed;
     width: 100%;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-   
 }
 
+/* Logo on the left */
 .logo {
     font-weight: bold;
     font-size: 1.5rem;
     color: #333;
 }
 
+
+.logo-img {
+    height: 50px;
+    /* adjust as needed */
+    width: auto;
+    display: block;
+}
+
+/* Center nav links */
 .nav-links {
     display: flex;
     list-style: none;
     gap: 1.5rem;
-   margin: 0;
-    padding-right: 50px;
+    margin: 0 auto;
+    /* centers horizontally */
+    padding: 0;
+    justify-content: center;
+    /* center items inside */
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
-    font-weight: 500;
+    color: azure;
+    font-size: 20px;
+    font-weight: 600;
     transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
     color: #b821d6;
-
 }
