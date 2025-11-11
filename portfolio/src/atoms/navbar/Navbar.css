@@ -43,5 +43,12 @@
 }
 
 .nav-links a:hover {
-    color: #b821d6;
+    color:#ff4081;
+}
+
+
+.nav-links a.active {
+    color: #ff4081;
+    /* active tab color */
+    border-bottom: 2px solid #ff4081;
 }

@@ -16,7 +16,7 @@ const AboutSection = () => {
 
           <h3>Passionate Developer & Creative Thinker</h3>
           <p>
-            Hello! I'm <strong>Chamalka</strong> — a software developer who
+            Hello! I'm <strong>Chamalka</strong>, a software developer who
             loves building clean, efficient, and user-friendly digital
             experiences. I specialize in full-stack web development using modern
             tools like

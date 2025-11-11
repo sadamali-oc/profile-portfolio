@@ -4,6 +4,7 @@ import ProfileImage from "./assets/ProfileImage.png";
 import "./Home.css";
 import ContactSection from "./atoms/contact/ContactSection";
 import AboutSection from "./atoms/AboutSection/AboutSection";
+import ProjectSection from "./atoms/projects/ProjectSection";
 
 const Home = () => {
   return (
@@ -29,7 +30,11 @@ const Home = () => {
         </section>
 
         <section id="projects" className="projects-section">
-          <h2>Projects</h2>
+      <ProjectSection />
+        </section>
+
+        <section id="services" className="services-section">
+          <h2>Services</h2>
         </section>
 
         <section id="contact" className="contact-section">

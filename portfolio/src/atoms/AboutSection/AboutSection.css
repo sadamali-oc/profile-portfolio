@@ -1,94 +1,96 @@
 /* ============================= */
-/* 🔹 About Section - Light UI   */
+/* 🔹 About Section - Modern UI  */
 /* ============================= */
+
 .about-section {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 4rem 2rem;
+    background-color: #080808;
+    /* dark background */
 }
 
 .about-container {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-  
-    /* smaller horizontal gap */
-    max-width: 900px;
-    /* container width */
+    gap: 4rem;
+    /* slightly larger gap */
+    max-width: 1000px;
     width: 100%;
-
-    /* closer to left edge */
     margin: 0 auto;
 }
 
-/* Left side - text */
+/* Left side - Text */
 .about-text {
     flex: 1;
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
     animation: fadeUp 1s forwards;
     animation-delay: 0.3s;
     padding-left: 0;
-    /* remove extra left padding */
+    /* no extra left padding */
 }
 
 /* Heading */
 .about-text h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color: #ffffff;
     margin-bottom: 0.5rem;
+    line-height: 1.2;
 }
 
-/* Role labels */
+/* Subtitle / Role labels */
 .about-labels {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.8rem;
+    gap: 0.7rem;
     margin-bottom: 1.2rem;
 }
 
 .label {
-    background: linear-gradient(90deg, #ff4081, #ffffff);
-    color: #fff;
-    padding: 0.4rem 0.9rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
+    background: linear-gradient(135deg, #ff4081, #b821d6);
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.95rem;
     font-weight: 500;
     letter-spacing: 0.3px;
-    box-shadow: 0 4px 12px rgba(184, 33, 214, 0.2);
+    box-shadow: 0 6px 20px rgba(184, 33, 214, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .label:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(33, 214, 184, 0.3);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(33, 214, 184, 0.35);
 }
 
 /* Subtitle */
 .about-text h3 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
-    background:  #ff4081;
+    background: linear-gradient(90deg, #ff4081, #b821d6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 /* Paragraph */
 .about-text p {
-    font-size: 1.1rem;
-    line-height: 1.6;
+    font-size: 1.15rem;
+    line-height: 1.7;
     color: #ffffff;
     margin-bottom: 1rem;
 }
 
 .highlight {
-    background: linear-gradient(90deg, #b821d6, #21d6b8);
     -webkit-background-clip: text;
+    background-color: #ffffff;
     -webkit-text-fill-color: transparent;
     font-weight: 600;
 }
 
-/* Right side - image */
+/* Right side - Image */
 .about-image {
     flex: 1;
     display: flex;
@@ -97,14 +99,19 @@
 
 .about-image img {
     width: 100%;
-    max-width: 300px;
-    /* smaller image */
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    max-width: 320px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     opacity: 0;
     transform: scale(0.9);
     animation: scaleIn 1s forwards;
     animation-delay: 0.6s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
 /* Animations */
@@ -122,14 +129,32 @@
     }
 }
 
-/* Responsive layout */
+/* Responsive Layouts */
+@media (max-width: 1024px) {
+    .about-container {
+        gap: 3rem;
+    }
+
+    .about-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .about-text p {
+        font-size: 1.05rem;
+    }
+}
+
 @media (max-width: 768px) {
     .about-container {
         flex-direction: column-reverse;
         text-align: center;
         gap: 2rem;
         align-items: center;
-        padding: 0 1rem;
+        padding: 0 1.5rem;
     }
 
     .about-text h1 {
@@ -150,5 +175,27 @@
 
     .about-image img {
         max-width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-text h1 {
+        font-size: 1.6rem;
+    }
+
+    .about-text h3 {
+        font-size: 1rem;
+    }
+
+    .about-text p {
+        font-size: 0.95rem;
+    }
+
+    .about-image img {
+        max-width: 220px;
+    }
+
+    .about-container {
+        gap: 1.5rem;
     }
 }
