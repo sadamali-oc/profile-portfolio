@@ -12,7 +12,8 @@
 .about-container {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
+    /* changed from flex-start to center */
     gap: 4rem;
     max-width: 1000px;
     width: 100%;
@@ -27,6 +28,8 @@
     animation: fadeUp 1s forwards;
     animation-delay: 0.3s;
     animation-timing-function: ease-out;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 
