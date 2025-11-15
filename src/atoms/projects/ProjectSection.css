@@ -74,7 +74,8 @@
 
 /* Project Card */
 .project-card {
-    flex: 0 0 32%;
+    flex: 1 1 31%;
+    max-width: 31%;
     background: #121212;
     border-radius: 15px;
     overflow: hidden;
@@ -184,10 +185,11 @@
 /* Responsive Design             */
 /* ============================= */
 
-/* Laptops / Medium screens */
+/* Tablets & Medium Screens */
 @media (max-width: 1024px) {
     .project-card {
-        flex: 0 0 45%;
+        flex: 1 1 45%;
+        max-width: 45%;
     }
 
     .project-img {
@@ -199,18 +201,15 @@
     }
 }
 
-/* Tablets & Small Laptops */
+/* Small Tablets */
 @media (max-width: 820px) {
     .projects-wrapper {
         width: 95%;
     }
 
     .project-card {
-        flex: 0 0 48%;
-    }
-
-    .project-info h3 {
-        font-size: 1.1rem;
+        flex: 1 1 48%;
+        max-width: 48%;
     }
 
     .arrow {
@@ -218,7 +217,7 @@
     }
 }
 
-/* Mobile (Portrait) */
+/* Mobile Phones */
 @media (max-width: 600px) {
     .slide {
         flex-direction: column;
@@ -226,38 +225,34 @@
     }
 
     .project-card {
-        flex: 0 0 90%;
+        flex: 1 1 100%;
+        max-width: 90%;
     }
 
     .project-img {
         height: 200px;
     }
 
-    .project-info {
-        padding: 0.8rem 1rem;
-    }
-
-    .project-info p {
-        font-size: 0.95rem;
-    }
-
     .arrow {
         font-size: 1.5rem;
+        top: auto;
+        bottom: -10px;
+        transform: none;
     }
 
-    .dots-container {
-        margin-top: 0.8rem;
+    .arrow.left {
+        left: 25%;
+    }
+
+    .arrow.right {
+        right: 25%;
     }
 }
 
-/* Extra Small Screens (Phones <400px) */
+/* Extra Small Phones */
 @media (max-width: 400px) {
-    .projects-section {
-        padding: 3rem 1rem;
-    }
-
     .project-card {
-        flex: 0 0 100%;
+        max-width: 100%;
     }
 
     .project-img {
