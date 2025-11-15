@@ -1,28 +1,36 @@
+/* Navbar container */
 .navbar {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    /* FIX so icon + logo align properly */
     padding: 1rem 2rem;
     position: fixed;
     width: 100%;
     z-index: 1000;
+
 }
 
-/* Logo on the left */
-.logo {
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: #333;
-}
-
-
+/* Logo */
 .logo-img {
     height: 50px;
-    /* adjust as needed */
     width: auto;
     display: block;
 }
 
-/* Center nav links */
+/* Menu Icon — hidden on desktop */
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    color: azure;
+    cursor: pointer;
+    z-index: 2000;
+    margin-top: 20px;
+    margin-right: 40px;
+    /* FIX: stays above menu */
+}
+
+/* Center nav links (desktop only) */
 .nav-links {
     display: flex;
     list-style: none;
@@ -31,7 +39,6 @@
     /* centers horizontally */
     padding: 0;
     justify-content: center;
-    /* center items inside */
 }
 
 .nav-links a {
@@ -43,12 +50,58 @@
 }
 
 .nav-links a:hover {
-    color:#ff4081;
+    color: #ff4081;
 }
-
 
 .nav-links a.active {
     color: #ff4081;
-    /* active tab color */
     border-bottom: 2px solid #ff4081;
+}
+
+/* ---------------------------------
+      MOBILE RESPONSIVE (≤768px)
+---------------------------------- */
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 1rem;
+        justify-content: space-between;
+    }
+
+    /* Show menu icon */
+    .menu-icon {
+        display: block;
+    }
+
+    /* FIX: stop nav-links from pushing icon away */
+    .nav-links {
+        margin: 0;
+        /* <— THIS FIXES THE ICON ISSUE */
+
+        /* Mobile dropdown menu */
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #000000;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.5rem 0;
+        display: none;
+        z-index: 1500;
+    }
+
+    /* Show menu when open */
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+    }
+
+    .logo-img {
+        height: 40px;
+    }
 }
