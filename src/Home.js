@@ -5,6 +5,7 @@ import "./Home.css";
 import ContactSection from "./atoms/contact/ContactSection";
 import AboutSection from "./atoms/AboutSection/AboutSection";
 import ProjectSection from "./atoms/projects/ProjectSection";
+import ServicesSection from "./atoms/services/Services";
 
 const Home = () => {
   return (
@@ -34,7 +35,7 @@ const Home = () => {
         </section>
 
         <section id="services" className="services-section">
-          <h2>Services</h2>
+         <ServicesSection />
         </section>
 
         <section id="contact" className="contact-section">
