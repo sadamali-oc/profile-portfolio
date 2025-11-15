@@ -39,7 +39,7 @@ const AboutSection = () => {
           {/* ⭐ Download CV Section */}
           <div className="cv-section">
             <a href={cvFile} download className="cv-button">
-              Download CV
+              Download Resume
             </a>
           </div>
         </div>

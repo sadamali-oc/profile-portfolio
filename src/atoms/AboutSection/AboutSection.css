@@ -3,7 +3,7 @@
 /* ============================= */
 
 .about-section {
-    padding: 5rem 2rem;
+    padding: 0rem 2rem;
     background: #0a0a0a;
     color: #fff;
     text-align: center;
@@ -27,8 +27,8 @@
     animation: fadeUp 1s forwards;
     animation-delay: 0.3s;
     animation-timing-function: ease-out;
-    padding-left: 0;
 }
+
 
 /* Heading */
 .about-text h1 {
@@ -121,11 +121,16 @@
 /* CV Button Section */
 .cv-section {
     margin-top: 2rem;
-    text-align: left;
+    display: flex;
+    /* enable flex */
+    justify-content: center;
+    /* center horizontally */
+    align-items: center;
+    /* center vertically if needed */
 }
 
 .cv-button {
-    display: inline-block;
+    display: inline-flex;
     padding: 10px 20px;
     background: #ff4081;
     color: white;
@@ -134,6 +139,7 @@
     border-radius: 8px;
     text-decoration: none;
     transition: transform 0.3s ease, background 0.3s ease;
+   justify-content: center;
 }
 
 .cv-button:hover {
