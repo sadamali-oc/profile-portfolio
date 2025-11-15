@@ -222,7 +222,7 @@ const Carousel = ({ projects, title, isLogoSection = false }) => {
 const ProjectSection = () => {
   return (
     <section id="projects" className="projects-section">
-      <Carousel projects={fullStackProjects} title="My Full Stack Projects" />
+      <Carousel projects={fullStackProjects} title="Full Stack Projects" />
       <Carousel projects={uiuxProjects} title="UI/UX Design Projects" />
       <Carousel projects={logos} title="Logo Designs" isLogoSection />
     </section>

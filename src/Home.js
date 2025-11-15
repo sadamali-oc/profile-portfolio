@@ -39,7 +39,6 @@ const Home = () => {
         </section>
 
         <section id="contact" className="contact-section">
-          <h2>Contact</h2>
           <ContactSection />
         </section>
       </main>

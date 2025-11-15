@@ -4,7 +4,8 @@
     justify-content: center;
     align-items: center;
     padding: 3rem 2rem;
-    background: linear-gradient(135deg, #1c1c1c, #2a002e);
+    background: #0a0a0a;
+    /* match About section background */
     color: #fff;
     text-align: center;
 }
@@ -15,26 +16,31 @@
     animation: fadeUp 1s ease forwards;
 }
 
+/* Title with gradient like About h3 */
 .contact-title {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    background: linear-gradient(to right, #b821d6, #21d6b8);
+    background-color: #fff;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+/* Text and info */
 .contact-text {
     font-size: 1.1rem;
     margin-bottom: 2rem;
-    color: #ccc;
+    color: #ffffff;
+    /* match About paragraph color */
 }
 
 .contact-info {
     font-size: 1rem;
     margin-bottom: 2rem;
-    color: #ddd;
+    color: #ffffff;
+    /* match About paragraph color */
 }
 
+/* Social icons */
 .social-icons {
     display: flex;
     justify-content: center;
@@ -43,13 +49,15 @@
 }
 
 .social-icons a {
-    color: #b821d6;
+    color: #ff4081;
+    /* accent pink like About labels */
     font-size: 2rem;
     transition: all 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #21d6b8;
+    color: #b821d6;
+    /* gradient-inspired hover */
     transform: scale(1.2);
 }
 

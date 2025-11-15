@@ -6,7 +6,7 @@ const ContactSection = () => {
   return (
     <section className="contact-section" id="contact">
       <div className="contact-container">
-        <h2 className="contact-title">📬 Get in Touch</h2>
+        <h2 className="contact-title">Get in Touch</h2>
         <p className="contact-text">
           I’d love to hear from you! Whether you have a project idea, want to
           collaborate, or just say hello, feel free to reach out.

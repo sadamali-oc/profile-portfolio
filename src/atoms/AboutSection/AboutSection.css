@@ -3,12 +3,10 @@
 /* ============================= */
 
 .about-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4rem 2rem;
-    background-color: #080808;
-    /* dark background */
+    padding: 5rem 2rem;
+    background: #0a0a0a;
+    color: #fff;
+    text-align: center;
 }
 
 .about-container {
@@ -16,7 +14,6 @@
     flex-direction: row;
     align-items: flex-start;
     gap: 4rem;
-    /* slightly larger gap */
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
@@ -29,14 +26,8 @@
     transform: translateY(40px);
     animation: fadeUp 1s forwards;
     animation-delay: 0.3s;
+    animation-timing-function: ease-out;
     padding-left: 0;
-
-    /* no extra left padding */
-}
-
-
-p{
-    text-align: justify;
 }
 
 /* Heading */
@@ -48,11 +39,16 @@ p{
 }
 
 /* Subtitle / Role labels */
+/* Subtitle / Role labels */
 .about-labels {
     display: flex;
+    /* make sure flex is enabled */
     flex-wrap: wrap;
-    gap: 0.7rem;
-    margin-bottom: 1.2rem;
+    /* allow wrapping */
+    justify-content: center;
+    gap: 2rem;
+    /* space between labels */
+    margin-bottom: 2rem;
 }
 
 .label {
@@ -76,7 +72,7 @@ p{
 .about-text h3 {
     font-size: 1.4rem;
     margin-bottom: 1rem;
-    background: linear-gradient(90deg, #ff4081, #b821d6);
+   background-color: #e7336f;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -87,6 +83,7 @@ p{
     line-height: 1.7;
     color: #ffffff;
     margin-bottom: 1rem;
+    text-align: justify;
 }
 
 .highlight {
@@ -112,6 +109,7 @@ p{
     transform: scale(0.9);
     animation: scaleIn 1s forwards;
     animation-delay: 0.6s;
+    animation-timing-function: ease-out;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -120,8 +118,7 @@ p{
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
-
-
+/* CV Button Section */
 .cv-section {
     margin-top: 2rem;
     text-align: left;
@@ -136,13 +133,14 @@ p{
     font-weight: 600;
     border-radius: 8px;
     text-decoration: none;
-    transition: 0.3s ease;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .cv-button:hover {
     background: #e7336f;
-    transform: translateY(-3px);
+    transform: translateY(-3px) scale(1.05);
 }
+
 /* Animations */
 @keyframes fadeUp {
     to {
@@ -196,10 +194,12 @@ p{
 
     .about-text p {
         font-size: 1rem;
+        text-align: center;
     }
 
     .about-labels {
         justify-content: center;
+        gap: 0.8rem;
     }
 
     .about-image img {
@@ -208,6 +208,14 @@ p{
 }
 
 @media (max-width: 480px) {
+    .about-section {
+        padding: 3rem 1rem;
+    }
+
+    .about-container {
+        gap: 1.5rem;
+    }
+
     .about-text h1 {
         font-size: 1.6rem;
     }
@@ -223,8 +231,15 @@ p{
     .about-image img {
         max-width: 220px;
     }
+}
 
-    .about-container {
-        gap: 1.5rem;
+/* Disable hover effects on touch devices */
+@media (hover: none) {
+
+    .label:hover,
+    .about-image img:hover,
+    .cv-button:hover {
+        transform: none;
+        box-shadow: none;
     }
 }
