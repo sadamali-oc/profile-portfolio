@@ -13,7 +13,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* changed from flex-start to center */
     gap: 4rem;
     max-width: 1000px;
     width: 100%;
@@ -32,6 +31,53 @@
     padding-right: 20px;
 }
 
+/* Tech Stack Section */
+.tech-stack {
+    margin-top: 2.5rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s forwards;
+    animation-delay: 1s;
+}
+
+.tech-stack h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #ff4081;
+}
+
+.tech-category {
+    margin-bottom: 1.5rem;
+}
+
+.tech-category h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.tech-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+}
+
+.tech-item {
+    background: linear-gradient(90deg, #ff4081, #b821d6);
+    color: #fff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: default;
+}
+
+.tech-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(255, 64, 129, 0.4);
+}
 
 /* Heading */
 .about-text h1 {
@@ -42,15 +88,11 @@
 }
 
 /* Subtitle / Role labels */
-/* Subtitle / Role labels */
 .about-labels {
     display: flex;
-    /* make sure flex is enabled */
     flex-wrap: wrap;
-    /* allow wrapping */
     justify-content: center;
     gap: 2rem;
-    /* space between labels */
     margin-bottom: 2rem;
 }
 
@@ -75,7 +117,7 @@
 .about-text h3 {
     font-size: 1.4rem;
     margin-bottom: 1rem;
-   background-color:  #e7336f;
+    background-color: #e7336f;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -121,15 +163,32 @@
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
+
+.tech-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: default;
+}
+
+.tech-item svg {
+    font-size: 1.2rem;
+    color: #ff4081;
+}
+
 /* CV Button Section */
 .cv-section {
-    margin-top: 2rem;
+    margin-top: 4rem;
     display: flex;
-    /* enable flex */
     justify-content: center;
-    /* center horizontally */
     align-items: center;
-    /* center vertically if needed */
 }
 
 .cv-button {
@@ -142,7 +201,7 @@
     border-radius: 8px;
     text-decoration: none;
     transition: transform 0.3s ease, background 0.3s ease;
-   justify-content: center;
+    justify-content: center;
 }
 
 .cv-button:hover {
@@ -214,6 +273,10 @@
     .about-image img {
         max-width: 280px;
     }
+
+    .tech-items {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -247,7 +310,8 @@
 
     .label:hover,
     .about-image img:hover,
-    .cv-button:hover {
+    .cv-button:hover,
+    .tech-item:hover {
         transform: none;
         box-shadow: none;
     }

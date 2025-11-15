@@ -25,7 +25,9 @@ const useScrollAnimation = (selector) => {
 
     elements.forEach((el) => observer.observe(el));
 
-    return () => elements.forEach((el) => observer.unobserve(el));
+    return () => {
+      elements.forEach((el) => observer.unobserve(el));
+    };
   }, [selector]);
 };
 
@@ -35,33 +37,44 @@ const Home = () => {
   return (
     <div>
       <Navbar />
+
       <main className="content">
+        {/* ================= HOME ================= */}
         <section id="home" className="home-section scroll-animate">
           <div className="home-container">
+            {/* LEFT TEXT */}
             <div className="text">
               <h1>
                 Hi, I'm Chamalka <span className="highlight-name">Obadage</span>
               </h1>
+              <p>Undergraduate of University of Moratuwa</p>
+              <p>Faculty of Information Technology</p>
               <p>Welcome to my portfolio 👋</p>
             </div>
+
+            {/* RIGHT IMAGE */}
             <div className="image">
               <img src={ProfileImage} alt="Profile of Chamalka Obadage" />
             </div>
           </div>
         </section>
 
+        {/* ================= ABOUT ================= */}
         <section id="about" className="scroll-animate">
           <AboutSection />
         </section>
 
+        {/* ================= PROJECTS ================= */}
         <section id="projects" className="projects-section scroll-animate">
           <ProjectSection />
         </section>
 
+        {/* ================= SERVICES ================= */}
         <section id="services" className="services-section scroll-animate">
           <ServicesSection />
         </section>
 
+        {/* ================= CONTACT ================= */}
         <section id="contact" className="contact-section scroll-animate">
           <ContactSection />
         </section>

@@ -9,7 +9,10 @@ const ContactSection = () => {
         <h2 className="contact-title">Get in Touch</h2>
         <p className="contact-text">
           I’d love to hear from you! Whether you have a project idea, want to
-          collaborate, or just say hello, feel free to reach out.
+          collaborate, or just say hello, feel free to reach out. I’m always
+          open to new opportunities, creative ideas, or even just a friendly
+          chat. Your message is important, and I’ll make sure to get back to you
+          as soon as possible. 
         </p>
 
         <div className="contact-info">

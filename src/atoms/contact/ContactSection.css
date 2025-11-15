@@ -1,45 +1,50 @@
+/* ============================= */
+/* Contact Section               */
+/* ============================= */
 .contact-section {
-    min-height: 80vh;
+    min-height: auto;
+    /* auto or 60vh for compact layout */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* remove vertical centering */
     align-items: center;
     background: #0a0a0a;
-    /* match About section background */
     color: #fff;
     text-align: center;
-    padding: 0;
-    /* remove extra padding */
+    padding: 2rem 1rem;
+    /* some padding for breathing space */
 }
 
+/* Container */
 .contact-container {
     max-width: 800px;
     width: 100%;
     animation: fadeUp 1s ease forwards;
 }
 
-/* Title with gradient like About h3 */
+/* Title */
 .contact-title {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
-    background-color: #fff;
+    margin: 0.5rem 0 1rem 0;
+    /* reduced vertical spacing */
+    background: linear-gradient(90deg, #ffffff, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 /* Text and info */
-.contact-text {
+.contact-text,
+.contact-info {
     font-size: 1.1rem;
-    margin-bottom: 2rem;
+    margin: 0.5rem 0;
+    /* reduced vertical spacing */
     color: #ffffff;
-    /* match About paragraph color */
+  
 }
 
-.contact-info {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-    color: #ffffff;
-    /* match About paragraph color */
-}
+
+
 
 /* Social icons */
 .social-icons {
@@ -51,14 +56,12 @@
 
 .social-icons a {
     color: #ff4081;
-    /* accent pink like About labels */
     font-size: 2rem;
     transition: all 0.3s ease;
 }
 
 .social-icons a:hover {
     color: #b821d6;
-    /* gradient-inspired hover */
     transform: scale(1.2);
 }
 
@@ -66,7 +69,8 @@
 @keyframes fadeUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(15px);
+        /* smaller offset */
     }
 
     to {
@@ -75,17 +79,38 @@
     }
 }
 
-/* Responsive */
+/* ============================= */
+/* Responsive Adjustments        */
+/* ============================= */
+
+/* Tablets & Small Laptops */
 @media (max-width: 768px) {
     .contact-title {
         font-size: 2rem;
     }
 
-    .contact-text {
+    .contact-text,
+    .contact-info {
         font-size: 1rem;
     }
 
     .social-icons a {
         font-size: 1.8rem;
+    }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+    .contact-title {
+        font-size: 1.8rem;
+    }
+
+    .contact-text,
+    .contact-info {
+        font-size: 0.95rem;
+    }
+
+    .social-icons a {
+        font-size: 1.6rem;
     }
 }

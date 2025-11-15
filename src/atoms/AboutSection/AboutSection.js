@@ -1,6 +1,26 @@
 import React from "react";
 import "./AboutSection.css";
-import cvFile from "../../assets/CV.pdf"; // ⭐ Add your CV here
+import cvFile from "../../assets/CV.pdf";
+import {
+  FaReact,
+  FaHtml5,
+  FaCss3Alt,
+  FaNodeJs,
+  FaGithub,
+  FaFigma,
+  FaAws,
+} from "react-icons/fa";
+import {
+  SiJavascript,
+  SiAngular,
+  SiExpress,
+  SiFlask,
+  SiPostgresql,
+  SiPostman,
+  SiFirebase,
+  SiRender,
+  SiVercel,
+} from "react-icons/si";
 
 const AboutSection = () => {
   return (
@@ -36,7 +56,82 @@ const AboutSection = () => {
             development while helping me grow as a collaborative team member.
           </p>
 
-          {/* ⭐ Download CV Section */}
+          <div className="tech-stack">
+            <h3>Tech Stack</h3>
+
+            <div className="tech-category">
+              <h4>Frontend</h4>
+              <div className="tech-items">
+                <span className="tech-item">
+                  <FaReact /> React
+                </span>
+                <span className="tech-item">
+                  <FaHtml5 /> HTML5
+                </span>
+                <span className="tech-item">
+                  <FaCss3Alt /> CSS3
+                </span>
+                <span className="tech-item">
+                  <SiJavascript /> JavaScript
+                </span>
+                <span className="tech-item">
+                  <SiAngular /> Angular
+                </span>
+              </div>
+            </div>
+
+            <div className="tech-category">
+              <h4>Backend / Database</h4>
+              <div className="tech-items">
+                <span className="tech-item">
+                  <FaNodeJs /> Node.js
+                </span>
+                <span className="tech-item">
+                  <SiExpress /> Express.js
+                </span>
+                <span className="tech-item">
+                  <SiFlask /> Flask
+                </span>
+                <span className="tech-item">
+                  <SiPostgresql /> PostgreSQL
+                </span>
+              </div>
+            </div>
+
+            <div className="tech-category">
+              <h4>Tools</h4>
+              <div className="tech-items">
+                <span className="tech-item">
+                  <FaFigma /> Figma
+                </span>
+                <span className="tech-item">
+                  <FaGithub /> GitHub
+                </span>
+                <span className="tech-item">
+                  <SiPostman /> Postman
+                </span>
+              </div>
+            </div>
+
+            <div className="tech-category">
+              <h4>Deployment</h4>
+              <div className="tech-items">
+                <span className="tech-item">
+                  <SiFirebase /> Firebase
+                </span>
+                <span className="tech-item">
+                  <FaAws /> AWS
+                </span>
+                <span className="tech-item">
+                  <SiRender /> Render
+                </span>
+                <span className="tech-item">
+                  <SiVercel /> Vercel
+                </span>
+              </div>
+            </div>
+          </div>
+
           <div className="cv-section">
             <a href={cvFile} download className="cv-button">
               Download Resume
